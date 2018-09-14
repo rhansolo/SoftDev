@@ -1,0 +1,6 @@
+import csv
+
+def main():
+	with open("occupations.csv") as csv_file:
+		reader = csv.reader(csv_file)
+		ne
