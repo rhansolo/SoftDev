@@ -1,0 +1,11 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/ting")
+def skra():
+    print(__name__)
+    return render_template('ting.html')
+
+app.debug = True
+app.run()
