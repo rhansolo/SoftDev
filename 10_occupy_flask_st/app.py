@@ -1,3 +1,8 @@
+#Team cOpSaNdRoBBeRs -- Bill Ni & Robin Han
+#SoftDev1 pd08
+#K10 -- Jinja Tuning
+# 2018-09-24
+
 import random
 from flask import Flask, render_template
 
