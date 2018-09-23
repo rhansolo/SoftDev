@@ -1,7 +1,6 @@
-#Robin Han
 #SoftDev1 pd08
-#K08 -- Fill Yer Flask
-#2018-09-20
+#K06 -- Stl/O: Divine your Destiny!
+#2018-09-13
 
 from flask import Flask
 
