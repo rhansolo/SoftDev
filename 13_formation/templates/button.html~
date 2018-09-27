@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> button test! </title>
+  </head>
+  <body>
+    <form action= "/auth">
+      <input type = "text" name = "anything!">
+      <input type = "button" value = "button1">
+    </form>
+  </body>
+</html>
