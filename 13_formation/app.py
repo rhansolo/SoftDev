@@ -11,8 +11,7 @@ def home():
 def authenticate():
     print(app)
     print(request)
-    print(request.args)
-    return "greetings" 
+    return "greetings" + request.args["username"] 
 
 if __name__ == "__main__":
     app.debug = True
