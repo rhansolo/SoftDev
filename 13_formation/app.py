@@ -7,11 +7,11 @@ def home():
     print(app)
     return render_template("button.html")
 
-@app.route("/auth")
+@app.route("/auth",methods=["POST"])
 def authenticate():
     print(app)
-    print(request)
-    return "greetings" + request.args["username"] 
+    print(request);
+    return render_template("newpage.html",user = request.args['username'], method = request.method)
 
 if __name__ == "__main__":
     app.debug = True
