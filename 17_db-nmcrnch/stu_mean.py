@@ -71,5 +71,7 @@ print("\n\n\n")
 
 def createTable():
         make_avg_table = "CREAT TABLE peeps_avg(id INTEGER PRIMARY KEY, average INTEGER)"
+def add_course(code, new_id, mark,c1):
+        c.execute('INSERT INTO courses VALUES({},{},{})'.format(code,new_id,mark))
 
                 
