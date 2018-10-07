@@ -11,6 +11,8 @@ c1 = dbcourses.cursor()
 dbstudents = sqlite3.connect("derivativeballoon.db")
 c2 = dbstudents.cursor()
 resetc1()
+dbtable = sqlite3.connect("dinoball.db") # courses
+c3 = dbtable.cursor()
 
 print("gradeLookup test:\n")
 
@@ -69,9 +71,10 @@ print(displayStuInfo(3, c1, c2))
 
 print("\n\n\n")
 
-def createTable():
-        make_avg_table = "CREAT TABLE peeps_avg(id INTEGER PRIMARY KEY, average INTEGER)"
-def add_course(code, new_id, mark,c1):
-        c.execute('INSERT INTO courses VALUES({},{},{})'.format(code,new_id,mark))
+def createTable(cursor):
+        cursor.execute("CREATE TABLE peeps_avg(id INTEGER PRIMARY KEY, average INTEGER)")
+        
+def add_course(code, new_id, mark,cursor):
+        cursor.execute('INSERT INTO courses VALUES({},{},{})'.format(code,new_id,mark))
 
                 
