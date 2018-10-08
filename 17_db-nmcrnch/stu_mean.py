@@ -75,6 +75,11 @@ def createTable(cursor):
         cursor.execute("CREATE TABLE peeps_avg(id INTEGER PRIMARY KEY, average INTEGER)")
         
 def add_course(code, new_id, mark,cursor):
-        cursor.execute('INSERT INTO courses VALUES({},{},{})'.format(code,new_id,mark))
-
+        cursor.execute("INSERT INTO courses VALUES('" + str(code) + "','" + str(new_id) + "','" + str(mark) + "')")
+                       
+print("add_course test: \n")
+add_course('engrish', 5, 98,c1)
+resetc1()
+c1.execute("SELECT * FROM courses")
+print(c1.fetchall())
                 

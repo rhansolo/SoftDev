@@ -19,7 +19,7 @@ c = db.cursor()               #facilitate db ops
 command = ""
 with open("peeps.csv", newline = '\n') as csvfile:
     reader=csv.DictReader(csvfile)
-    command+="CREATE TABLE peeps (name TEXT, id INTEGER, age INTEGER);"
+    #command+="CREATE TABLE peeps (name TEXT, id INTEGER, age INTEGER);"
     for row in reader:
             command+="INSERT INTO peeps VALUES ('"+row['name']+"', "+row['id']+", "+row['age']+");"
             
@@ -28,7 +28,7 @@ with open("peeps.csv", newline = '\n') as csvfile:
 
 with open("courses.csv", newline = '\n') as csvfile2:
     reader=csv.DictReader(csvfile2)
-    command+="CREATE TABLE courses (code TEXT, id INTEGER, mark INTEGER);"
+    #command+="CREATE TABLE courses (code TEXT, id INTEGER, mark INTEGER);"
     for row in reader:
             command+="INSERT INTO courses VALUES ('"+row['code']+"', "+row['id']+", "+row['mark']+");"
 
