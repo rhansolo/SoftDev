@@ -86,7 +86,9 @@ def createTable(cursor):
 
 #Adds and new course, id, and mark to the existing tables list. 
 def add_course(code, new_id, mark,cursor):
-        cursor.execute("INSERT INTO courses (code, id, mark) VALUES('" + str(code) + "'," + str(new_id) + "," + str(mark) + ")")
+        command = 'INSERT INTO courses VALUES(?,?,?)'
+        #cursor.execute("INSERT INTO courses (code, id, mark) VALUES('" + str(code) + "'," + str(new_id) + "," + str(mark) + ")")
+        cursor.execute(command,(str(code),str(new_id),str(mark)))
 
 #Testing add_course
 print("add_course test: \n")
