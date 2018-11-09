@@ -6,16 +6,32 @@
     <title> Sample site</title>
   </head>
   <body>
-    <div class = "callout small">
+    <div class="top-bar is-at-top">
+      <div class="top-bar-left">
+                <ul class="menu">
+                    <li><a href="#intro">This is top-bar! Click on the links on the right</a></li>
+                </ul>
+      </div>
+      <div class="top-bar-right">
+          <ul class="menu">
+              <li><a href="#reminder">A few things!</a></li>
+              <li><a href="#callout">Cells/Callouts</a></li>
+              <li><a href="#buttons">Buttons!</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#cards">CARDS</a></li>
+          </ul>
+      </div>
+    </div>
+    <div id = "reminder" class = "callout small">
         A few things:
         <ul>
-            <li> 
+            <li>
                 The class <b>grid-container</b> defines a container in which "cells," or other divs with specific properties, should be placed.
             </li>
-            <li> 
+            <li>
                 The class <b>grid-x grid-padding-x</b> essentially acts as a new line within the grid-container, allowing placement of multiple cells on the same line.
             </li>
-            <li> 
+            <li>
                 As you've probably noticed, this div isn't attached to a grid-container. This is a div known as a <b>callout</b>, which is a colored element. There are multiple types:
                 <ul>
                     <li> <b style = "color:blue">primary callout</b> </li>
@@ -28,7 +44,7 @@
             </li>
         </ul>
     </div>
-    <div class="grid-container">
+    <div id = "callout" class="grid-container">
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
             <div class="primary callout">
@@ -48,7 +64,7 @@
                 </div>
             </div>
             <div class="large-4 medium-4 cell">
-                <div class="primary callout">                 
+                <div class="primary callout">
                     I am a cell of size 4! Notice how I'm on a new line. This is because a grid is defined as having a maximum of <b>size 12</b>.
                 </div>
            </div>
@@ -75,7 +91,7 @@
             </div>
           <div class = "grid-x grid-padding-x">
             <div class="large-4 medium-4 cell">
-                <div class="primary callout">                 
+                <div class="primary callout">
                     Cell 1 of size 4!
                 </div>
             </div>
@@ -91,30 +107,31 @@
             </div>
             </div>
         </div>
-        <div class="text-center large-4 medium-4 small-12 cell">
+        <div id = "buttons" class="text-center large-4 medium-4 small-12 cell">
+            <br>
+            <br>
+            <br>
             <div class="large-12 medium-12">
                 <div class="grid-x grid-padding-x cell">
-                    <a class="expanded button">THESE ARE BUTTONS!</a>
+                    <a class="expanded button"><b>THESE ARE BUTTONS!</b></a>
                 </div>
             </div>
             <div class="grid-x grid-padding-x">
-
-                <!-- left buttons -->
                 <div class="large-6 medium-6 small-12 text-left cell">
 
                     <div class="grid-x grid-padding-x">
                         <div class="large-12 medium-12">
-                            <a class="alert button">This is an Alert button</a>
+                            <a class="alert button">This is an Alert button! Just a red button...</a>
                         </div>
                     </div>
                     <div class="grid-x grid-padding-x">
                         <div class="large-12 medium-12">
-                            <a class="button">This is a regular button</a>
+                            <a href = "home" class="button">This is a just a regular button.</a>
                         </div>
                     </div>
                     <div class="grid-x grid-padding-x">
-                        <div class="large-12 medium-12">
-                            <a class="success button">This is a success button</a>
+                        <div  class="large-12 medium-12">
+                            <a href = "http://www.youtube.com" class="success button">This is a success button. You can click on me to go to another linked website!</a>
                         </div>
                     </div>
                     <div class="grid-x grid-padding-x">
@@ -135,22 +152,62 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-x grid-padding-x">
+            <div id = "forms" class="grid-x grid-padding-x">
                 <div class="large-12 columns cell" id="forms">
+                    <br>
+                    <br>
                     <br>
                     <h1>FORMSSSSSSSSSSSSS</h1>
                     <form>
                         <div class="large-12 columns cell">
-                            <label><b>Username!</b>
+                            <label><b>Username! This is a form of type text. Type whatever you like.</b>
                                 <input type="text" placeholder="large-12.columns" />
                             </label>
-                            <label><b>Password!</b>
+                            <label><b>Password! This is a form of type password. Notice how it doesn't show the character you typed!</b>
                                 <input type="password" placeholder="large-12.columns" />
                             </label>
                         </div>
                     </form>
                 </div>
-            </div> 
+            </div>
+            <div  id = "cards" class="grid-container">
+            <br><br>
+            <h1> These are called cards!</h1>
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 small-12 cell">
+                    <br>
+                    <div class="radius bordered shadow card">
+                        <img src="data:image/jpeg;base64,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" >
+                        <div class="card-section">
+                            <h4>Card Section 1. </h4>
+                            <p>This is a card section! You can put text under the image and write whatever you would like.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-4 medium-4 small-12 cell">
+                    <br>
+                    <div class="radius bordered shadow card">
+                        <img src="https://ih1.redbubble.net/image.498769821.0878/flat,800x800,075,f.jpg">
+                        <div class="card-section">
+                            <h4>Card Section Two.</h4>
+                            <p>You can even add multiple card sections side by side! I'm beginning to notice a trend......</p>
+                        </div>
+                    </div>
+              </div>
+
+              <div class="large-4 medium-4 small-12 cell">
+                  <br>
+                  <div class="radius bordered shadow card">
+                      <img src="https://i.kym-cdn.com/entries/icons/mobile/000/027/475/Screen_Shot_2018-10-25_at_11.02.15_AM.jpg">
+                      <div class="card-section">
+                          <h4>Card Section Two.</h4>
+                          <p> Can this be the new wow react for facebook :o </p>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+        </div>
     <!---
         <div class="large-6 medium-6cell" id="han">
             <div class="primary callout">
@@ -162,4 +219,3 @@
 
   </body>
 </html>
-
