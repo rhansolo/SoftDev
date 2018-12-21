@@ -19,6 +19,7 @@ var changeHeading = function(e) {
 
 var removeItem = function(e) {
     this.remove()
+    document.getElementById("h").innerHTML = "Hello World!";
 };
 
 var lis = document.getElementsByTagName("li");
@@ -39,7 +40,7 @@ var addItem = function(e) {
         document.getElementById("h").innerHTML = "Hello World!";
     });
     node.addEventListener("click", removeItem);
-    document.getElementById('thelist').appendChild(node);    
+    document.getElementById('thelist').appendChild(node);
 };
 
 var i = 1;
@@ -48,7 +49,7 @@ var addNextFib = function(e) {
     var node  = document.createElement("li");
     node.innerHTML = fibonacci(i);
     i++;
-    document.getElementById('fiblist').appendChild(node);    
+    document.getElementById('fiblist').appendChild(node);
 };
 
 
