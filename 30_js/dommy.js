@@ -1,7 +1,7 @@
 //Byteme -- Robin Han & Kenny Li
 //Softdev pd8
-//K28 -- Sequential Progression
-//2018-12-18
+//K30 -- Sequential Progression III: Season of the Witch
+//2018-12-21
 
 var fibonacci = function(n){
     if (n < 2){
