@@ -5,22 +5,57 @@
 
 var fibonacci = function(n){
     if (n < 2){
-	return n;
+    return n;
     }
     else{
-	return fibonacci(n-1) + fibonacci(n-2);
+    return fibonacci(n-1) + fibonacci(n-2);
     };
 };
 
-document.getElementById('b').addEventListener("click",function(){
-    console.log("added element");
+var changeHeading = function(e) {
+    var heading = document.getElementById("h");
+    heading.innerHTML = this.innerHTML
+};
+
+var removeItem = function(e) {
+    this.remove()
+};
+
+var lis = document.getElementsByTagName("li");
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("mouseover", changeHeading);
+    lis[i].addEventListener("mouseout", function() {
+        document.getElementById("h").innerHTML = "Hello World!";
+    });
+    lis[i].addEventListener("click", removeItem);
+};
+
+var addItem = function(e) {
+    // console.log("added element");
     var node  = document.createElement("li");
-    var text = document.createTextNode('WORD');
-    node.appendChild(text);
-    document.getElementById('thelist').appendChild(node);
-});
+    node.innerHTML = "WORD";
+    node.addEventListener("mouseover", changeHeading);
+    node.addEventListener("mouseout", function() {
+        document.getElementById("h").innerHTML = "Hello World!";
+    });
+    node.addEventListener("click", removeItem);
+    document.getElementById('thelist').appendChild(node);    
+};
 
-document.getElementById('fb').addEventListener("click",function(e){
-    console.log(f);
-});
+var i = 1;
+var addNextFib = function(e) {
+    // console.log("added element");
+    var node  = document.createElement("li");
+    node.innerHTML = fibonacci(i);
+    i++;
+    document.getElementById('fiblist').appendChild(node);    
+};
 
+
+document.getElementById('b').addEventListener("click", addItem);
+document.getElementById('fb').addEventListener("click",addNextFib);
+
+
+// document.getElementById('fb').addEventListener("click",function(e){
+//     console.log(f);
+// });
